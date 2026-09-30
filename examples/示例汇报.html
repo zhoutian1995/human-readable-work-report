@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>示例工作汇报｜结账页改版</title>
+  <style>
+    :root { color-scheme: light; --ink:#172033; --muted:#61708a; --line:#e4e9f1; --blue:#2563eb; --green:#087443; --amber:#985a00; --red:#b42318; --bg:#f6f8fb; --card:#fff; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; }
+    main { max-width:860px; margin:0 auto; padding:32px 18px 56px; }
+    .eyebrow { color:var(--blue); font-weight:700; letter-spacing:.08em; font-size:.78rem; }
+    h1 { margin:.3rem 0 .4rem; font-size:clamp(1.8rem,5vw,2.6rem); line-height:1.2; }
+    h2 { margin-top:0; font-size:1.15rem; }
+    .muted { color:var(--muted); }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px; margin-top:16px; box-shadow:0 8px 24px rgba(24,39,75,.05); }
+    .status { display:inline-flex; align-items:center; gap:7px; margin:12px 0 2px; color:var(--green); font-weight:700; }
+    .status::before { content:""; width:9px; height:9px; border-radius:50%; background:#17a673; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    ul,ol { padding-left:1.25rem; }
+    li+li { margin-top:7px; }
+    .label { display:block; color:var(--muted); font-size:.88rem; }
+    .value { font-weight:700; }
+    details { border-top:1px solid var(--line); margin-top:18px; padding-top:14px; }
+    summary { cursor:pointer; font-weight:700; }
+    code { background:#eef2f7; border-radius:5px; padding:.1em .3em; }
+    @media (max-width:620px) { main { padding:22px 14px 42px; } .card { padding:18px; border-radius:14px; } .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">工作汇报 · 演示数据</div>
+    <h1>结账页改版已经完成并通过验收</h1>
+    <p class="muted">这是虚构项目，用来展示汇报结构，不代表真实业务数据。</p>
+
+    <section class="card" aria-labelledby="state-title">
+      <h2 id="state-title">当前状态</h2>
+      <div class="status">已完成</div>
+      <p>新的结账页已在测试环境打开，核心下单流程可以走通。</p>
+      <div class="grid">
+        <div><span class="label">真正做成的事</span><span class="value">减少了表单步骤，补上错误提示</span></div>
+        <div><span class="label">还没验证的事</span><span class="value">真实用户转化率还没有数据</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>这次做成了什么</h2>
+      <ul>
+        <li>把收货信息和支付信息拆成两个清晰步骤。</li>
+        <li>用户漏填必填项时，页面会直接指出缺少哪一项。</li>
+        <li>在手机宽度下完成了手动检查，按钮和文字没有被截断。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>卡点与风险</h2>
+      <p>目前没有阻塞发布的技术问题。转化率改善只是合理判断，必须等真实流量数据确认。</p>
+    </section>
+
+    <section class="card">
+      <h2>下一步</h2>
+      <ol>
+        <li>上线小流量测试，完成信号是产生第一批可比较的数据。</li>
+        <li>观察错误提示和支付失败记录，完成信号是得到一轮用户反馈。</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>需要用户决定</h2>
+      <p>暂无。小流量测试结束后，再决定是否全部切换到新版。</p>
+      <details>
+        <summary>证据与技术细节</summary>
+        <p>演示中的“测试环境”和检查结果均为虚构，只用于说明如何把证据、判断和未知分开。</p>
+        <p>真实报告应链接到实际页面、测试输出或文件，而不是复制无法核对的日志。</p>
+      </details>
+    </section>
+  </main>
+</body>
+</html>

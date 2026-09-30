@@ -1,0 +1,7 @@
+interface:
+  display_name: "人话工作汇报"
+  short_description: "把 Codex 工作讲成小白能看懂的中文进展和结果汇报"
+  default_prompt: "Use $human-readable-work-report to explain the work in plain Chinese for a non-technical reader."
+
+policy:
+  allow_implicit_invocation: true
