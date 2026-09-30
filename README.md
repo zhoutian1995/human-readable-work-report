@@ -30,6 +30,8 @@ python3 "$CODEX_HOME/skills/.system/skill-installer/scripts/install-skill-from-g
 
 安装脚本会把它放到 `${CODEX_HOME}/skills/human-readable-work-report`。如果当前 Codex 窗口还没有刷新，重新打开会话即可。Skill Installer 会拒绝覆盖已经存在的同名目录；升级前请先备份或移走旧目录，再重新安装。
 
+安装是否在当前窗口立即可见取决于宿主的加载时机；最明确的验证方式是下一轮使用 `$human-readable-work-report HTML` 显式调用。
+
 也可以手动安装：
 
 ```bash
@@ -89,6 +91,8 @@ $human-readable-work-report 短版
 测试命令、文件和限制放在这里。
 </details>
 ```
+
+如果聊天界面不支持 Markdown 折叠，直接保留一个简短的“证据”段落即可；真正的 HTML 文件会使用可展开的折叠区。
 
 ## HTML 报告长什么样
 
